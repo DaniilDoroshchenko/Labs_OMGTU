@@ -2,29 +2,25 @@
 using namespace std;
 
 int main() {
-    char animal;
-    cout << "vvedite simvol (T, L, S, V): ";
-    cin >> animal;
+    int num;
+    cout << "vvedite cifru (1-4): ";
+    cin >> num;
 
-    switch(animal) {
-        case 'T':
-        case 't':
-            cout << "tigr" << endl;
+    switch(num) {
+        case 1:
+            cout << "zima" << endl;
             break;
-        case 'L':
-        case 'l':
-            cout << "lev" << endl;
+        case 2:
+            cout << "vesna" << endl;
             break;
-        case 'S':
-        case 's':
-            cout << "slon" << endl;
+        case 3:
+            cout << "leto" << endl;
             break;
-        case 'V':
-        case 'v':
-            cout << "volk" << endl;
+        case 4:
+            cout << "osen" << endl;
             break;
         default:
-            cout << "takogo simvola net" << endl;
+            cout << "takoy cifry net" << endl;
     }
 
     return 0;

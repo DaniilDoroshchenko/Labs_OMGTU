@@ -2,20 +2,19 @@
 using namespace std;
 
 int main() {
-    int num;
-    cout << "vvedite cifru (1-4): ";
-    cin >> num;
+    double x, y;
+    cout << "vvedite x y: ";
+    cin >> x >> y;
 
-    if (num == 1) {
-        cout << "zima" << endl;
-    } else if (num == 2) {
-        cout << "vesna" << endl;
-    } else if (num == 3) {
-        cout << "leto" << endl;
-    } else if (num == 4) {
-        cout << "osen" << endl;
+    
+    bool in_triangle = (x >= 0) && (y >= 0) && (y <= -x + 6);
+    
+    bool in_circle = ((x - 1) * (x - 1) + (y - 1.5) * (y - 1.5)) <= 0.64;
+
+    if (in_triangle && !in_circle) {
+        cout << "TRUE" << endl;
     } else {
-        cout << "takoy cifry net" << endl;
+        cout << "FALSE" << endl;
     }
 
     return 0;
